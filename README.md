@@ -3,7 +3,7 @@
 A beautiful smooth glowing orb that follows your mouse cursor.
 
 ## Live Demo
-[▶️ Open Live Demo](https://nyxxzio.github.io/glowing-mouse-orb/)
+[▶️ Open Live Demo](https://nyxxzio.github.io/mouse-following-glowing-orb/)
 
 ## How to Use
 1. Download or copy the `index.html` file
