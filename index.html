@@ -1,0 +1,50 @@
+フルコードです（index.htmlにコピペして使ってください）：
+
+`html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowing Orb</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #05050f;
+      overflow: hidden;
+      cursor: none;
+    }
+    .orb {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #00ffff 20%, #ff00ff 60%, transparent);
+      box-shadow: 0 0 80px #00ffff, 0 0 160px #ff00ff;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="orb" id="orb"></div>
+
+  <script>
+    const orb = document.getElementById('orb');
+
+    document.addEventListener('mousemove', (e) => {
+      orb.style.left = e.clientX + 'px';
+      orb.style.top = e.clientY + 'px';
+    });
+
+    window.onload = () => {
+      orb.style.left = (window.innerWidth / 2) + 'px';
+      orb.style.top = (window.innerHeight / 2) + 'px';
+    };
+  </script>
+
+</body>
+</html>
